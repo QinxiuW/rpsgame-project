@@ -44,12 +44,11 @@ public enum ResponseStatus {
   }
 
   @Override
-  // TODO: need be jason format
   public String toString() {
     Map<String, String> params = new HashMap<>();
-    params.put("code",this.code.toString());
-    params.put("message",this.message);
-    ObjectMapper mapper =  new ObjectMapper();
+    params.put("code", this.code.toString());
+    params.put("message", this.message);
+    ObjectMapper mapper = new ObjectMapper();
     String jsonString = null;
     try {
       jsonString = mapper.writeValueAsString(params);
