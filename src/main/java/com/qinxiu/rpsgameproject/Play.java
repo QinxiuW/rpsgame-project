@@ -14,21 +14,6 @@ public class Play {
   private int result;
   private BlockingQueue<String> remoteChoiceQueue;
 
-
-  /**
-   * Play Constructor.
-   *
-   * @param id {@code int} identifier of Play.
-   * @param p1 {@link Player} Player.
-   * @param p2 {@link Player} Player.
-   */
-  public Play(int id, Player p1, Player p2) {
-    this.id = id;
-    this.p1 = p1;
-    this.p2 = p2;
-    start();
-  }
-
   /**
    * Play Constructor with remote choice queue.
    *
