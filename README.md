@@ -36,4 +36,4 @@ the end of the iterations, how many games each player has won and how many were 
 | 400003      | INVALID PLAYER |
 
 ## WORK FLOW CHART
-![image](https://drive.google.com/file/d/1eRcXMBHeEy3HX-DeaOX3htvXEXepmqac/view?usp=sharing)
+![image](https://github.com/QinxiuW/rpsgame-project/blob/master/work%20flow%20chart.png)
