@@ -14,8 +14,23 @@ public class Play {
   private int result;
   private BlockingQueue<String> remoteChoiceQueue;
 
+
   /**
    * Play Constructor.
+   *
+   * @param id {@code int} identifier of Play.
+   * @param p1 {@link Player} Player.
+   * @param p2 {@link Player} Player.
+   */
+  public Play(int id, Player p1, Player p2) {
+    this.id = id;
+    this.p1 = p1;
+    this.p2 = p2;
+    start();
+  }
+
+  /**
+   * Play Constructor with remote choice queue.
    *
    * @param id                {@code int} identifier of Play.
    * @param p1                {@link Player} Player.
@@ -59,7 +74,10 @@ public class Play {
     var response = new AtomicReference<>("");
     while (response.get().isBlank()) {
       try {
-        response.set(this.remoteChoiceQueue.take());
+        String value = this.remoteChoiceQueue.take();
+        if (!value.isBlank() && !value.isEmpty()) {
+          response.set(value);
+        }
       } catch (InterruptedException e) {
         e.printStackTrace();
       }

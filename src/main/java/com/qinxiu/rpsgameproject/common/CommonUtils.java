@@ -19,7 +19,6 @@ public class CommonUtils {
   public static void outputFile(String pathName, String data) {
     try {
       File file = new File(pathName);
-
       //if file doesnt exists, then create it
       if (!file.exists()) {
         if (file.createNewFile()) {

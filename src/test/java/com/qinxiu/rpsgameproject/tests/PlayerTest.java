@@ -1,4 +1,4 @@
-package com.qinxiu.rpsgameproject.test;
+package com.qinxiu.rpsgameproject.tests;
 
 
 import com.qinxiu.rpsgameproject.Player;

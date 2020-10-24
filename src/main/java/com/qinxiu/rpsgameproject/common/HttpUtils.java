@@ -38,7 +38,7 @@ public class HttpUtils {
    * @param status       {@link ResponseStatus} costume response status.
    * @throws IOException exception.
    */
-  public static void setResponse(HttpExchange httpExchange, int httpCode, ResponseStatus status)
+  public static String setResponse(HttpExchange httpExchange, int httpCode, ResponseStatus status)
       throws IOException {
     httpExchange.sendResponseHeaders(httpCode, status.toString().getBytes(
         StandardCharsets.UTF_8).length);
@@ -47,6 +47,7 @@ public class HttpUtils {
     writer.write(status.toString());
     writer.close();
     responseBody.close();
+    return status.toString();
   }
 
 
