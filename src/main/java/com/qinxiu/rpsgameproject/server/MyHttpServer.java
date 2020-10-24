@@ -10,8 +10,6 @@ import org.springframework.beans.factory.annotation.Value;
 public class MyHttpServer {
 
   private com.sun.net.httpserver.HttpServer httpServer;
-  @Value("${server.port}")
-  private int port;
 
   /**
    * MyHttpServer Constructor.
@@ -25,7 +23,7 @@ public class MyHttpServer {
 
     //Create an HttpServer instance and bind it to the specified IP address and port number
     this.httpServer = com.sun.net.httpserver.HttpServer
-        .create(new InetSocketAddress(port), 0);
+        .create(new InetSocketAddress(HttpUtils.PORT), 0);
 
     //Create an HttpContext
     if (playerHandler != null) {
