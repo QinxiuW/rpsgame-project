@@ -1,4 +1,4 @@
-package com.qinxiu.rpsgameproject.tests;
+package com.qinxiu.rpsgameproject.tests.server;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;

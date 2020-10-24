@@ -1,4 +1,4 @@
-package com.qinxiu.rpsgameproject.tests;
+package com.qinxiu.rpsgameproject.tests.common;
 
 
 import com.qinxiu.rpsgameproject.common.CommonUtils;
