@@ -134,7 +134,5 @@ public class ServerTest {
     Mockito.verify(mockHttpExchange, times(1)).getRequestURI();
     return handler;
   }
-
-
 }
 

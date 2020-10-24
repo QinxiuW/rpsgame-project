@@ -5,21 +5,22 @@ import com.sun.net.httpserver.HttpHandler;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.util.concurrent.Executors;
+import org.springframework.beans.factory.annotation.Value;
 
 public class MyHttpServer {
 
   private com.sun.net.httpserver.HttpServer httpServer;
-  // TODO: Port needs go to config file
+  @Value("${server.port}")
+  private int port;
 
   /**
    * MyHttpServer Constructor.
    *
-   * @param port          {@code int} server port.
    * @param playerHandler {@link HttpHandler} http handler for remote player.
    * @param choiceHandler {@link HttpHandler} http handler for remote player's choice.
    * @throws IOException exception.
    */
-  public MyHttpServer(int port, HttpHandler playerHandler, HttpHandler choiceHandler)
+  public MyHttpServer(HttpHandler playerHandler, HttpHandler choiceHandler)
       throws IOException {
 
     //Create an HttpServer instance and bind it to the specified IP address and port number

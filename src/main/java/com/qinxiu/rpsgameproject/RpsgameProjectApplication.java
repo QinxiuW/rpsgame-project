@@ -1,13 +1,15 @@
 package com.qinxiu.rpsgameproject;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-
 public class RpsgameProjectApplication {
 
+  /**
+   * Main.
+   * @param args {@code String[]}
+   */
   public static void main(String[] args) {
-
+    GameConsole gameConsole = new GameConsole();
+    gameConsole.start();
+    gameConsole.end();
+    System.exit(0);
   }
-
 }

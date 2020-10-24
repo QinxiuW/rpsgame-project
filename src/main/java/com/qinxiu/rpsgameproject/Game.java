@@ -26,7 +26,7 @@ public class Game {
     startPlays(iteration, remoteChoiceQueue);
   }
 
-  public Play[] getPlays(){
+  public Play[] getPlays() {
     return this.plays;
   }
 
