@@ -101,10 +101,8 @@ public class GameConsole {
     // Active waiting
     System.out.println("waiting for remote player...");
     var response = new AtomicReference<>("");
-    while (response.get().isBlank()) {
-      response.set(playerQueue.take());
-      //  Thread.sleep(500);
-    }
+    response.set(playerQueue.take());
+
 
     Player p1 = new Player("Elisa", false, true);
     Player p2 = new Player(response.get(), true, true);

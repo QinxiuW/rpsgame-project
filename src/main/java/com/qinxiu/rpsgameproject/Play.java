@@ -57,16 +57,10 @@ public class Play {
   private String getRemoteChoice() {
     System.out.println("Game [" + this.id + "] waiting for remote player's choice...");
     var response = new AtomicReference<>("");
-    while (response.get().isBlank()) {
-      try {
-        String value = this.remoteChoiceQueue.take();
-        if (!value.isBlank() && !value.isEmpty()) {
-          response.set(value);
-        }
-      } catch (InterruptedException e) {
-        e.printStackTrace();
-      }
-      //  Thread.sleep(500);
+    try {
+      response.set(this.remoteChoiceQueue.take());
+    } catch (InterruptedException e) {
+      e.printStackTrace();
     }
     return response.get();
   }

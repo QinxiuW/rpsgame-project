@@ -60,14 +60,14 @@ public class PlayTest {
     BlockingQueue<String> mockQueue =  Mockito.mock(LinkedBlockingQueue.class);
     Player p1 = new Player("p1", false, true);
     Player p2 = new Player("p2", true, true);
-    Mockito.when(mockQueue.take()).thenReturn("").thenReturn(Choices.ROCK);
+    Mockito.when(mockQueue.take()).thenReturn(Choices.ROCK);
 
     // Act
     Play play = new Play(1, p1, p2, mockQueue);
 
     // Asserts
     assertPlay(play, p1, p2, 1);
-    Mockito.verify(mockQueue, times(2)).take();
+    Mockito.verify(mockQueue, times(1)).take();
   }
 
   private void assertPlay(Play play, Player p1, Player p2, int iteration) {
