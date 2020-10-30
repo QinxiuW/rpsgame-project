@@ -98,7 +98,7 @@ public class GameConsole {
     MyHttpServer httpServer = new MyHttpServer(playerHandler, choiceHandler);
     httpServer.start();
 
-    // Active waiting
+    // Waiting Player connection
     System.out.println("waiting for remote player...");
     var response = new AtomicReference<>("");
     response.set(playerQueue.take());
