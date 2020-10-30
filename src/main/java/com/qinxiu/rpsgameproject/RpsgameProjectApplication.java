@@ -10,6 +10,5 @@ public class RpsgameProjectApplication {
     GameConsole gameConsole = new GameConsole();
     gameConsole.start();
     gameConsole.end();
-    System.exit(0);
   }
 }

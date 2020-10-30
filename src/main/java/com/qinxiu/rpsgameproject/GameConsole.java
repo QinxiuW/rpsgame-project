@@ -110,8 +110,6 @@ public class GameConsole {
 
     // stop the server
     httpServer.close();
-    playerHandler.close();
-    choiceHandler.close();
   }
 
 

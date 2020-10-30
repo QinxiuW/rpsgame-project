@@ -65,13 +65,6 @@ public class MyHttpHandler implements HttpHandler {
     }
   }
 
-  /**
-   * Close httpExchange.
-   */
-  public void close() {
-    this.httpExchange.close();
-  }
-
   private void validateParamsValue(String value) throws IOException {
     if (this.paramPrompt.equals(HttpUtils.PROMPT_CHOICE)) {
       validateChoice(value);
